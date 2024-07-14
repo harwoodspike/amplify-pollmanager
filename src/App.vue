@@ -2,8 +2,10 @@
 import HelloWorld from './components/HelloWorld.vue'
 import '@aws-amplify/ui-vue/styles.css'
 
-import outputs from '../amplify_outputs.json'
-Amplify.configure(outputs);
+import { Amplify } from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
 </script>
 
 <template>
