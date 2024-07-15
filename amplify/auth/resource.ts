@@ -14,19 +14,21 @@ export const auth = defineAuth({
     //     privateKey: secret('SIWA_PRIVATE_KEY'),
     //     teamId: secret('SIWA_TEAM_ID')
     //   },
-    //   loginWithAmazon: {
-    //     clientId: secret('LOGINWITHAMAZON_CLIENT_ID'),
-    //     clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET')
-    //   },
+      loginWithAmazon: {
+        clientId: secret('LOGINWITHAMAZON_CLIENT_ID'),
+        clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET'),
+        scopes: ['email']
+      },
     //   facebook: {
     //     clientId: secret('FACEBOOK_CLIENT_ID'),
     //     clientSecret: secret('FACEBOOK_CLIENT_SECRET')
     //   },
       callbackUrls: [
-        'http://localhost:3000/profile',
-        'https://mywebsite.com/profile'
+        'http://localhost:5173/profile',
+        'https://polls.hspike.com/profile',
+        'https://main.dho3b6aflboej.amplifyapp.com/profile'
       ],
-      logoutUrls: ['http://localhost:3000/', 'https://mywebsite.com'],
+      logoutUrls: ['http://localhost:5173/', 'https://polls.hspike.com', 'https://main.dho3b6aflboej.amplifyapp.com'],
     }
   }
 });
