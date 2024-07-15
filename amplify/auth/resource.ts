@@ -16,8 +16,7 @@ export const auth = defineAuth({
     //   },
       loginWithAmazon: {
         clientId: secret('LOGINWITHAMAZON_CLIENT_ID'),
-        clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET'),
-        scopes: ['email']
+        clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET')
       },
     //   facebook: {
     //     clientId: secret('FACEBOOK_CLIENT_ID'),
